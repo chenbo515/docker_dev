@@ -1,0 +1,138 @@
+# all requirements
+# to install: pip install -r requirements.txt
+
+# MUST HAVINGS
+#gunicorn==19.4.5
+#django==1.8.8
+#MySQL-python==1.2.5
+
+# Images
+#Pillow==3.1.0
+#django-imagekit
+
+# Token
+#django-tokenapi
+
+# theme
+#django-suit
+
+# Network
+#requests
+#scrapy
+
+# Enhancements
+#django-adminplus
+#django-modeltranslation
+
+# Utils
+#pytz
+#xmltodict
+
+# Debug
+#django-debug-toolbar
+
+# Queue
+#rq
+
+
+
+# Cache
+#django-redis-cache
+#django-cachalot
+#hiredis
+
+# Auto Complete
+#django-extensions
+
+# testing
+#django-test-without-migrations
+#mock
+
+# datetime
+#dateutils
+
+# country
+
+# jsonte
+#jsonte
+
+# django-rq 0.9.0 have bug, so use github source code instant
+#django-rq==0.9.0
+#git+https://github.com/tysci/django-rq
+
+
+attrdict==2.0.0
+#blueware==1.0.10
+cffi==1.5.2
+characteristic==14.3.0
+click==6.6
+cryptography==1.3.1
+cssselect==0.9.1
+dateutils==0.6.6
+decutils==1.0
+Django==1.8.12
+django-adminplus==0.5
+django-appconf==1.0.1
+django-cachalot==1.2.0
+django-debug-toolbar==1.4
+django-extensions==1.6.1
+django-froala-editor==2.0.1
+django-imagekit==3.3
+django-model-changes==0.15
+django-modeltranslation==0.11
+django-mysqlpool==0.1.post9
+django-redis-cache==1.6.5
+#django-rq==0.9.0
+django-suit==0.2.16
+django-test-without-migrations==0.4
+django-tokenapi==0.2.3
+#DjangoUeditor==1.8.143
+enum34==1.1.3
+funcsigs==0.4
+gevent==1.0.2
+greenlet==0.4.9
+gunicorn==19.4.5
+hiredis==0.2.0
+idna==2.1
+ipaddress==1.0.16
+iso3166==0.7
+jpush==3.1.2
+# jsonte version manage have bug. so don't set version
+#jsonte==0.8.5a0
+jsonte
+lxml==3.5.0
+mock==1.3.0
+MySQL-python==1.2.5
+ordereddict==1.1
+#oss==0.4.2
+pbr==1.8.1
+pilkit==1.1.13
+Pillow==3.1.0
+pingpp==2.0.9
+pyasn1==0.1.9
+pyasn1-modules==0.0.8
+pycountry==1.19
+pycparser==2.14
+pycrypto==2.6.1
+pyOpenSSL==0.15.1
+python-dateutil==2.4.2
+pytz==2015.7
+PyYAML==3.11
+queuelib==1.4.2
+redis==2.10.5
+requests==2.9.1
+rq==0.5.6
+Scrapy==1.0.4
+sdag2==1.0.2
+service-identity==14.0.0
+six==1.10.0
+SQLAlchemy==1.0.11
+sqlparse==0.1.18
+Twisted==15.5.0
+ua-parser==0.7.1
+user-agents==1.0.1
+w3lib==1.13.0
+xmltodict==0.9.2
+zope.interface==4.1.3
+git+https://github.com/tysci/django-rq
+git+https://github.com/tysci/DjangoUeditor.git#egg=django-ueditor

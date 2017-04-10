@@ -1,0 +1,36 @@
+# 用于开发环境的dockerfile, 去掉多余的权限,允许ssh登录
+
+FROM ubuntu:16.04
+
+# 安装基础环境
+RUN  apt-get update; apt-get install -y aptitude; aptitude -y update;aptitude -y upgrade; \
+    aptitude install -y build-essential autoconf libtool pkg-config; \
+    aptitude install -y python; aptitude install -y python-virtualenv; \
+    aptitude install -y mysql-common mysql-client libmysqlclient-dev python-dev libjpeg-dev; \
+    aptitude -y install git libssl-dev libffi-dev libxslt1-dev python-dev python-lxml; \
+    apt-get install -y openssh-server python-pip supervisor;
+
+# 安装开发工具
+RUN  apt-get install -y htop dstat ansible tmux
+# 创建工程目录
+RUN mkdir -p /data/www/gogo /data/log /data/backup /opt/venv;
+RUN mkdir -p /data/log/app /var/log/supervisor
+RUN mkdir /var/run/sshd
+
+# 安装pip依赖包
+COPY ./requirements.txt /tmp/requirements.txt
+COPY ./supervisord/dev.conf /etc/supervisor/conf.d/supervisord.conf
+RUN pip install --upgrade pip
+RUN pip install -r /tmp/requirements.txt
+
+RUN locale-gen zh_CN.UTF-8
+
+WORKDIR /data/www/gogo
+
+# 开启sshd
+RUN echo 'root:root' |chpasswd
+RUN sed -ri 's/^PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config
+RUN sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config
+
+EXPOSE 22
+CMD ["/usr/bin/supervisord"]
