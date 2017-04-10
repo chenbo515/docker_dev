@@ -11,7 +11,7 @@ RUN  apt-get update; apt-get install -y aptitude; aptitude -y update;aptitude -y
     apt-get install -y openssh-server python-pip supervisor;
 
 # 安装开发工具
-RUN  apt-get install -y htop dstat ansible tmux
+RUN  apt-get install -y htop dstat ansible tmux ipython
 # 创建工程目录
 RUN mkdir -p /data/www/gogo /data/log /data/backup /opt/venv;
 RUN mkdir -p /data/log/app /var/log/supervisor
