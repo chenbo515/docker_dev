@@ -8,7 +8,7 @@ RUN  apt-get update; apt-get install -y aptitude; aptitude -y update;aptitude -y
     aptitude install -y python; aptitude install -y python-virtualenv; \
     aptitude install -y mysql-common mysql-client libmysqlclient-dev python-dev libjpeg-dev; \
     aptitude -y install git libssl-dev libffi-dev libxslt1-dev python-dev python-lxml; \
-    apt-get install -y openssh-server python-pip supervisor;
+    apt-get install -y openssh-server python-pip supervisor locales;
 
 # 安装开发工具
 RUN  apt-get install -y htop dstat ansible tmux ipython
